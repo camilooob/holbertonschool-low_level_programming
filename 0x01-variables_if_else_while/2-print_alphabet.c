@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 /**
  * main - Entry point
  *
@@ -7,10 +7,10 @@
 int main(void)
 {
 char letra;
-for(letra = 'a' ;letra <= 'z'; letra++)
+for (letra = 'a' ;letra <= 'z'; letra++)
 {
 putchar(letra);
-putchat('\n');
+putchar('\n');
 }
 return (0);
 }
