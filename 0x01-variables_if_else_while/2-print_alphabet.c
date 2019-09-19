@@ -7,10 +7,10 @@
 int main(void)
 {
 char letra;
-for(letra=0;letra <= 'z';letra++)
+for(letra = 'a' ;letra <= 'z'; letra++)
 {
 putchar(letra);
-putchat(\n);
+putchat('\n');
 }
 return (0);
 }
