@@ -7,10 +7,8 @@
 int main(void)
 {
 int numero;
-for (numero = 0; numero <= 9; numero++)
-{
-putchar(letra);
-}
+for (numero = '0'; numero <= '9'; numero++)
+putchar(numero);
 putchar('\n');
 return (0);
 }
