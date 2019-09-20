@@ -12,7 +12,7 @@ for (numero = '0'; numero <= '9'; numero++)
 putchar(numero);
 if (numero < '9')
 {
-putchar(',');	
+putchar(',');
 putchar(' ');
 }
 }
