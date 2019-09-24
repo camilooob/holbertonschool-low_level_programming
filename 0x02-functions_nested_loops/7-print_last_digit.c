@@ -4,7 +4,8 @@
 * @c: takes in a character
 * Return: 0 for uppercase, 1 for lowercase
 */
-int print_last_digit(int n){
+int print_last_digit(int n)
+{
 int last;
 last = (n % 10);
 if (last < 0)
