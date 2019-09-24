@@ -1,4 +1,8 @@
 #include "holberton.h"
+/**
+ * times_table - prints the 9 times table
+ * Return: no return
+ */
 void times_table(void)
 {
 int fila, columna, resultado, resultado1, resultado2;
