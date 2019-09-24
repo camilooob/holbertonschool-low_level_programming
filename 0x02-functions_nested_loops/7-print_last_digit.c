@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * print_last_digit - prints the last digit of a number
-* @c: takes in a character
+* @n: the number to be checker
 * Return: 0 for uppercase, 1 for lowercase
 */
 int print_last_digit(int n)
