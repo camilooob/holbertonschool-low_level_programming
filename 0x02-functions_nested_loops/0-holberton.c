@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
  * main - Entry point
  *
@@ -6,23 +6,15 @@
  */
 int main(void)
 {
-char h = 'H';
-char o = 'o';
-char l = 'l';
-char b = 'b';
-char e = 'e';
-char r = 'r';
-char t = 't';
-char n = 'n';
-putchar(h);
-putchar(o);
-putchar(l);
-putchar(b);
-putchar(e);
-putchar(r);
-putchar(t);
-putchar(o);
-putchar(n);
-putchar('\n');
+_putchar('H');
+_putchar('o');
+_putchar('l');
+_putchar('b');
+_putchar('e');
+_putchar('r');
+_putchar('t');
+_putchar('o');
+_putchar('n');
+_putchar('\n');
 return (0);
 }
