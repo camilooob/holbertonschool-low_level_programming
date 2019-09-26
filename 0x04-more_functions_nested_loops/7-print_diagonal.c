@@ -1,12 +1,13 @@
 #include "holberton.h"
 /**
  ** print_diagonal - print a diagonal.
- ** @n: diagonal
- ** Return: Always 0.
+ ** @n: input diagonal.
+ ** Return: no return.
  **/
 void print_diagonal(int n)
 {
 int diag = 92;
+int espacio = 32;
 int x;
 int i;
 if (n <= 0)
@@ -21,7 +22,7 @@ for (x = 1; x <= i; x++)
 {
 if (x < i)
 {
-_putchar(42);
+_putchar(espacio);
 }
 else
 {
@@ -32,4 +33,3 @@ _putchar('\n');
 }
 }
 }
-
