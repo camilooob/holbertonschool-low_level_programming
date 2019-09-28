@@ -1,38 +1,35 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Accept empty value
+ * write - Screen information
+ * @void: Description of a empty parameter
  *
- * Return: Always 0 (Success)
+ * Description: This sort number from 00 01 to 98 99
+ * Return: 0 Value if it works
  */
 int main(void)
 {
-int i, j, k, l;
-for (i = 48 ; i < 58 ; i++)
-{
-for (j = 48 ; j < 58 ; j++)
-{
-for (k = 48 ; k < 58 ; k++)
-{
-for (l = 48 ; l < 58 ; l++)
-{
-if (k >= i)
-{
-putchar(i);
-putchar(j);
-putchar(32);
-putchar(k);
-putchar(l);
-if ((i == 57) & (j == 56) & (k == 57) & (l == 57))
-{
-break;
-}
-putchar(44);
-putchar(32);
-}
-}
-}
-}
-}
-putchar(10);
-return (0);
-}
+	int x, y;
+
+	for (x = 0; x < 100; x++)
+	{
+		for (y = 0; y < 100; y++)
+		{
+			if (x < y && x != y)
+			{
+				putchar((x / 10) + '0');
+				putchar((x % 10) + '0');
+				putchar(' ');
+				putchar((y / 10) + '0');
+				putchar((y % 10) + '0');
+				if (!(x == 98 && y == 99))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}}
