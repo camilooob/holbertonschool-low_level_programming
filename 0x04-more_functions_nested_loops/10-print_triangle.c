@@ -7,17 +7,17 @@
  */
 void print_triangle(int size)
 {
-	int nume, space;
+	int filas, columnas;
 
 	if (size <= 0)
 	{
-		_putchar(10);
+		_putchar('\n');
 	}
-	for (nume = 0; nume < size; nume++)
+	for (filas = 0; filas < size; filas++)
 	{
-		for (space = 0; space < size; space++)
+		for (columnas = 0; columnas < size; columnas++)
 		{
-			if (space < (size - (nume + 1)))
+			if (columnas < (size - (filas + 1)))
 			{
 				_putchar(32);
 			}
@@ -26,6 +26,6 @@ void print_triangle(int size)
 				_putchar(35);
 			}
 		}
-		_putchar(10);
+		_putchar('\n');
 	}
 }

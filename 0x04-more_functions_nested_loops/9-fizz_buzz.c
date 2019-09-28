@@ -6,39 +6,39 @@
 */
 int main(void)
 {
-	int i;
+int num = 0;
+int multiplodecinco;
+int multiplodetres;
 
-	for (i = 1; i <= 100; i++)
-	{
-		int mod5 = i % 5;
-		int mod3 = i % 3;
-
-		if (mod5 == 0 && mod3 != 0)
-		{
-		printf("Buzz");
-		}
-
-		if (mod3 == 0 && mod5 != 0)
-		{
-		printf("Fizz");
-		}
-
-		if (mod3 == 0 && mod5 == 0)
-		{
-		printf("FizzBuzz");
-		}
-
-		if ((mod3 != 0) && (mod5 != 0))
-		{
-		printf("%d", i);
-		}
-
-		if (i != 100)
-		{
-		printf(" ");
-		}
-
-	}
-	printf("\n");
-	return (0);
+for (num = 1; num <= 100; num++)
+{
+multiplodecinco = num % 5 == 0;
+multiplodetres = num % 3 == 0;
+if (multiplodetres)
+{
+printf("Fizz");
+printf(" ");
+}
+else if (num == 100)
+{
+printf("Buzz");
+}
+else if (multiplodecinco)
+{
+printf("Buzz");
+printf(" ");
+}
+else if (multiplodecinco && multiplodetres)
+{
+printf("FizzBuzz");
+printf(" ");
+}
+else
+{
+printf("%i", num);
+printf(" ");
+}
+}
+printf("\n");
+return (0);
 }
