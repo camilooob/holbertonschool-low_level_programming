@@ -20,5 +20,5 @@ int main(void)
 		else
 			printf("%li\n", z);
 	}
-	return (0)
+	return (0);
 }
