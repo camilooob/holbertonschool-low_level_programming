@@ -1,35 +1,49 @@
 #include <stdio.h>
+
 /**
- * main - Accept empty value
- * write - Screen information
- * @void: Description of a empty parameter
+ * main - Entry point
  *
- * Description: This sort number from 00 01 to 98 99
- * Return: 0 Value if it works
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int x, y;
+	/* get LastDigit of random number "n"  and set his position */
+	int i = 0;
+	int j = 0;
+	int calc[2] = {0, 0};
+	int digits[4] = {0, 0, 0, 0};
 
-	for (x = 0; x < 100; x++)
+	for (j = 0; j < 100; j++)
 	{
-		for (y = 0; y < 100; y++)
+		for (i = 0; i < 100; i++)
 		{
-			if (x < y && x != y)
+			if (i != j)
 			{
-				putchar((x / 10) + '0');
-				putchar((x % 10) + '0');
-				putchar(' ');
-				putchar((y / 10) + '0');
-				putchar((y % 10) + '0');
-				if (!(x == 98 && y == 99))
+				calc[0] = (j * 100) + i;
+				calc[1] = (i * 100) + j;
+
+				digits[0] = j / 10;
+				digits[1] = j % 10;
+				digits[2] = i / 10;
+				digits[3] = i % 10;
+
+				if (calc[0] < calc[1])
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(digits[0] + '0');
+					putchar(digits[1] + '0');
+					putchar(32);
+					putchar(digits[2] + '0');
+					putchar(digits[3] + '0');
+
+					if ((i != 99) || (j != 98))
+					{
+						putchar(44);
+						putchar(32);
+					}
 				}
 			}
 		}
 	}
 	putchar('\n');
 	return (0);
-}}
+}
