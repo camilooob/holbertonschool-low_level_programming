@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- * put2 - a function that prints.
+ * puts2 - a function that prints one char out of 2
+ * of a string, followed by a new line.
  * @str: input string
  */
 void puts2(char *str)
