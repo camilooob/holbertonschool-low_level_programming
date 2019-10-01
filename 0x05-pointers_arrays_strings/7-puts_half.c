@@ -13,7 +13,7 @@ for (i = 0; str[i] != '\0'; i++)
 {
 largo++;
 }
-if (largo %2 != 0)
+if (largo % 2 != 0)
 {
 for (i = (largo / 2) + 1; i < largo; i++)
 {
