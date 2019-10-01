@@ -12,6 +12,6 @@ void _puts(char *str)
 		if (_putchar(*str++) == EOF)
 			break;
 	}
-	if (_putchar('/n') == EOF)
+	if (_putchar('\n') == EOF)
 		_putchar(*str);
 }
