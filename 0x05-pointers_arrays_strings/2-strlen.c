@@ -2,7 +2,7 @@
 /**
  * _strlen - reverse a string
  * @s: first integer
- * Return: string
+ * Return: contador
  */
 int _strlen(char *s)
 {
