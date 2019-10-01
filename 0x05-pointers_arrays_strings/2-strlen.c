@@ -6,9 +6,12 @@
 #include "holberton.h"
 int _strlen(char *s)
 {
-const char *p = s;
+char contador = 0;
 
 	while (*s)
-		++s;
-	return (s - p);
+	{
+		contador++;
+		s++;
+	}
+return contador;
 }
