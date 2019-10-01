@@ -2,9 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_rev - a function that prints a string
- * in reverse, followed by a new line.
- * @s: input string
+ * put2 - a function that prints.
+ * @str: input string
  */
 
 void puts2(char *str)
@@ -13,7 +12,7 @@ void puts2(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if(i  % 2 == 0) 
+		if (i  % 2 == 0)
 		{
 		_putchar(str[i]);
 		}
