@@ -1,9 +1,9 @@
 #include "holberton.h"
+
 /**
- * _strlen - reverse a string
- * @s: first integer
- * @contador: cuenta
- * Return: contador
+ * _strlen - a function that returns the length of a string.
+ * @s: input string
+ * Return: length of string
  */
 int _strlen(char *s)
 {
