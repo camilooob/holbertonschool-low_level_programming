@@ -13,5 +13,5 @@ char contador = 0;
 		contador++;
 		s++;
 	}
-return contador;
+return (contador);
 }
