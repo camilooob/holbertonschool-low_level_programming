@@ -7,12 +7,11 @@
  */
 int _strlen(char *s)
 {
-char contador = 0;
+char *contador = s;
 
 	while (*s)
 	{
-		contador++;
-		++s;
+		s++;
 	}
-return (contador);
+return (s - contador);
 }
