@@ -12,7 +12,7 @@ char contador = 0;
 	while (*s)
 	{
 		contador++;
-		s++;
+		++s;
 	}
 return (contador);
 }
