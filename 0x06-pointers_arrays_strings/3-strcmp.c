@@ -1,21 +1,15 @@
 #include "holberton.h"
+
 /**
- * _strcmp - concatenates two words.
- * @s1: output
- * @s2: input
- * Return: x
+ * _strcmp - a function that compares two strings.
+ * @s1: first string
+ * @s2: second string
+ * Return: value of comparison
  */
+
 int _strcmp(char *s1, char *s2)
 {
-for (int i = 0; ; i++)
-{
-if (*s1 != *s2)
-{
-return (*s1 < *s2 ? (*s1 - *s2) : (*s1 - *s2));
-}
-else if (*s1 == *s1)
-{
-return (0);
-}
-}
+while (*s1 && (*s1 == *s2))
+s1++, s2++;
+return (*(char *)s1 - *(char *)s2);
 }
