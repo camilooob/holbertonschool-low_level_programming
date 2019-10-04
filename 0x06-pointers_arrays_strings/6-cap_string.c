@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 /**
  ** *cap_string - put 1 when is a uppercase
