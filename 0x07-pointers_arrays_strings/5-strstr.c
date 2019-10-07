@@ -1,14 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strpbrk - search into "s" from start, to end or to
- * find any match char with "accept"
- * @s: string input
- * @accept: char letters to search
- *
- *
- * Return: address where char was found, null is doesnt
- * On error: -1 inapropiate entry
+ * _strstr - Write a function that locates a substring
+ * @haystack: input. 
+ * @needle: output.
+ * Return: haystack + 1.
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -26,11 +22,10 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 				j++;
-			
 		}
 		if (!needle[j])
 		{
-			return(haystack + i);
+			return (haystack + i);
 		}
 		i++;
 	}
