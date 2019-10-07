@@ -1,29 +1,21 @@
 #include "holberton.h"
+
 /**
- * _strchr - prints buffer in hexa
- * @c: the address of memory to print
- * @s: the size of the memory to print
+ * _strchr - search into "s" upto find "c", then gives the addres
+ * where was found
+ * @s: string input
+ * @c: char to search
  *
  *
- * Return: Nothing.
+ * Return: address where is the char into string if not found,
+ * then return 'NULL'
+ * On error: -1 inapropiate entry
  */
+
 char *_strchr(char *s, char c)
 {
-	int i;
-	char *p = s;
+	while (*s && !(*s == c))
+		s++;
 
-	for (i = 0; i != c; ++i)
-	{
-		if (p[i] == c)
-		{
-			while (p[i] != '\0')
-			{
-				s = &p[i];
-				i++;
-				return (s);
-			}
-			break;
-		}
-	}
-return (0);
+	return ((*s == c) ? s : 0);
 }
