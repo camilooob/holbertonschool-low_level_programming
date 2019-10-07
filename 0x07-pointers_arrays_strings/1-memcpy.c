@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 /**
  * _memcpy - prints buffer in hexa
@@ -18,4 +17,3 @@ i = 0;
 }
 return (dest);
 }
-
