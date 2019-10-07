@@ -13,12 +13,20 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	char *org = accept;
+	int i = 0;
+	int j = 0;
 
-	for (; *s; s++)
-		for (accept = org; *accept; accept++)
-			if (*s == *accept)
-				return (s);
+	while (s[i])
+	{
+		j = 0;
+		while (accept[j])
+		{
+			if (s[i] == accept[j])
+				return (s + i);
+			j++;
+		}
+		i++;
+	}
 
 	return (0);
 }

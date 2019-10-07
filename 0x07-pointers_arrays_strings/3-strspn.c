@@ -13,14 +13,26 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int cnt = 0;
-	char *org = accept;
-	unsigned int i = 0;
+	unsigned int a = 0;
+	int i = 0, b;
 
-	for (; *s && cnt == i; s++, i++)
-		for (accept = org; *accept; accept++)
-			if (*s == *accept)
-				cnt++;
+	while (s[i])
+	{
+		b = 0;
+		while (accept[b])
+		{
+			if (s[i] == accept[b])
+			{
+				a++;
+				break;
+			}
+			b++;
+		}
+		if (!accept[b])
+			break;
+		i++;
+	}
 
-	return (cnt);
+	return (a);
+
 }
