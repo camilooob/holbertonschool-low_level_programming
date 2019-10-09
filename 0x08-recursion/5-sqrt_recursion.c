@@ -11,14 +11,13 @@ int _root(int base, int root)
 {
 	if (base == root * root)
 	{
-		return(root);
+		return (root);
 	}
 	else if (base < root * root)
 	{
 		return (-1);
 	}
 		return (_root(base, root + 1));
-	
 }
 /**
  * _sqrt_recursion - Print my number for sqrt.
@@ -27,6 +26,6 @@ int _root(int base, int root)
  */
 int _sqrt_recursion(int n)
 {
-	return (_root(n, 1 ));
+	return (_root(n, 1));
 }
 
