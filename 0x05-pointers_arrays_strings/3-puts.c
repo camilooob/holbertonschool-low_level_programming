@@ -1,17 +1,16 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
- * _puts - print string
- * @str: input string
- */
+  * _puts - count the characters on a string
+  * @str: a pointer the integer we want to set to 402
+  *
+  * Return: int
+  */
 void _puts(char *str)
 {
-	while (*str)
+	while (*str != '\0')
 	{
-		if (_putchar(*str++) == EOF)
-			break;
+	_putchar(*str);
+	str++;
 	}
-	if (_putchar('\n') == EOF)
-		_putchar(*str);
+	_putchar('\n');
 }
