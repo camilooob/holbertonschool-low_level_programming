@@ -22,7 +22,7 @@ int _root(int base, int root)
 }
 /**
  * _sqrt_recursion - Print my number for sqrt.
- * @n:§ for search her sqrt
+ * @n: for search her sqrt.
  * Return: The number.
  */
 int _sqrt_recursion(int n)
