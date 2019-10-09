@@ -20,6 +20,11 @@ int _root(int base, int root)
 		return (_root(base, root + 1));
 	
 }
+/**
+ * _sqrt_recursion - Print my number for sqrt.
+ * @n:§ for search her sqrt
+ * Return: The number.
+ */
 int _sqrt_recursion(int n)
 {
 	return (_root(n, 1 ));
