@@ -1,4 +1,4 @@
-#include "holberton.h"
+_putchar(*str);#include "holberton.h"
 /**
   * _puts - count the characters on a string
   * @str: a pointer the integer we want to set to 402
