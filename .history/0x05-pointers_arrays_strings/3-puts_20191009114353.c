@@ -1,4 +1,4 @@
-#include "holberton.h"
+_putchar(*str);#include "holberton.h"
 /**
   * _puts - count the characters on a string
   * @str: a pointer the integer we want to set to 402
@@ -9,8 +9,8 @@ void _puts(char *str)
 {
 	while (*str != '\0')
 	{
-		_putchar(*str);
-		str++;
+	_putchar(*str);
+	str++;
 	}
 	_putchar('\n');
 }
