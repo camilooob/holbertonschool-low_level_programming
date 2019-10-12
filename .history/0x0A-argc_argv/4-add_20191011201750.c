@@ -1,3 +1,4 @@
+
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -8,9 +9,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i = 0;
 	int mult = 0;
-	if (argc > 1)
+
+	if (i == 0)
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
+	else
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -18,10 +25,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", mult);
 		return (0);
-	}
-	else
-	{
-		printf("%s\n", "Error");
-		return (1);
 	}
 }
