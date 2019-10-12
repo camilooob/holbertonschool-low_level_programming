@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("%i", sum);
+		printf("%i", sum");
 	}
 	else
 	{
