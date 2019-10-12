@@ -9,18 +9,12 @@
 int main(int argc, char *argv[])
 {
 	int i = 0;
-	int mult = 0;
-	if (i == 0)
+	int sum = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("%s\n", "Error");
+		sum = atoi(argv[i]);
 	}
-	else
-	{
-		for (i = 1; i < argc; i++)
-		{
-			mult = atoi(argv[i]) * atoi(argv[i - 1]);
-		}
-		printf("%d\n", mult);
-	}
+	printf("%d\n", sum);
 	return (0);
 }
