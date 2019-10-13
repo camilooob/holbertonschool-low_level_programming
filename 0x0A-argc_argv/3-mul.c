@@ -1,28 +1,26 @@
 #include "holberton.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - main fun.
- * @argc: argc.
- * @argv: argv.
- * Return: O.
+ * main - Multiply 2 number if that numbers are digits.
+ * @argc: Size of my Array of arrays
+ * @argv: Position in my main array.
+ * Return: Always is 0 if is succes.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
-	int mult = 1;
+	int a, res;
+
+	res = 1;
 	if (argc > 2)
 	{
-		for (i = 1; i < argc; i++)
+		for (a = 1; a < argc; a++)
 		{
-			mult = atoi(argv[i]) * mult;
+			res = res * atoi(argv[a]);
 		}
-		printf("%d\n", mult);
+		printf("%d\n", res);
 	}
 	else
-	{
-		printf("%s\n", "Error");
-		return (1);
-	}
+		printf("Error\n");
 	return (0);
 }
