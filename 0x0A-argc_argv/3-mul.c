@@ -1,3 +1,4 @@
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -9,19 +10,18 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int mult = 0;
-	if (argc > 1)
+	int mult = 1;
+	if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			mult = atoi(argv[i]) * atoi(argv[i - 1]);
+			mult = atoi(argv[i]) * mult;
 		}
 		printf("%d\n", mult);
-		return (0);
 	}
 	else
 	{
 		printf("%s\n", "Error");
-		return (1);
 	}
+	return (0);
 }
