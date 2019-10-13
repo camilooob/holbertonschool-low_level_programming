@@ -1,35 +1,29 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Function for mynameis.
- *@argc: integer.
- *@argv: character.
- * Return: 0 Always.
+ * main - Sum my digit after the second array.
+ * @argc: Size of my Array of arrays
+ * @argv: Position in my main array.
+ * Return: Always is 0 if is succes.
  */
 int main(int argc, char **argv)
 {
-	int i;
-	int sum = 0;
+	int i, a, sum;
 
-	if (argc == 1)
+	sum = 0;
+	for (i = 1; i < argc; i++)
 	{
-		printf("%i", sum);
-	}
-	else
-	{
-		for (i = 1; i < argc; i++)
+		for (a = 0; argv[i][a] != '\0'; a++)
 		{
-			if (*argv[i] > 48 && *argv[i] < 57)
-			{
-				sum = sum + atoi(argv[i]);
-			}
-			else
+			if (argv[i][a] < 47 || argv[i][a] > 57)
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
-		return (0);
+			sum = sum + atoi(argv[i]);
 	}
+	printf("%d\n", sum);
+	return (0);
 }
