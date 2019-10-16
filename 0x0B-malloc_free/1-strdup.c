@@ -22,8 +22,8 @@ char _len(char *str)
 char *_strdup(char *str)
 {
 char *a;
-int j = 0;
-int i = 0;
+int j;
+int i;
 if (str == NULL)
 {
 return (0);
