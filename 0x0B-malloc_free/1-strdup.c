@@ -25,15 +25,17 @@ char *a;
 int j = 0;
 int i = 0;
 j = _len(str);
-a = malloc(sizeof(str) + 1 * j);
+a = malloc(j * sizeof(str) + 1);
 if (a ==  NULL || str == NULL)
 {
 return (0);
 }
-
+else 
+{
 for (i = 0; str[i] != '\0'; i++)
 {
 	a[i] = str[i];
 }
 return (a);
+}
 }
