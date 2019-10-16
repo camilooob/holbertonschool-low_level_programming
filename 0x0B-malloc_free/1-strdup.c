@@ -1,12 +1,14 @@
+
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * _len - make array with malloc.
- * @str: str.
- * Return: Array.
+ * _strlen - Give me the length of a string.
+ * @str: Ny string of input.
+ * Return: The length.
  */
-char _len(char *str)
+int _strlen(char *str)
 {
 	int i;
 
@@ -15,31 +17,30 @@ char _len(char *str)
 	return (i);
 }
 /**
- * _strdup - make array with malloc.
- * @str: str
- * Return: Array.
+ * _strdup - Copy an string in a new space of memory declarated before for
+ * malloc.
+ * @str: Ny string of input.
+ * Return: The coppy of the string.
  */
 char *_strdup(char *str)
 {
-char *a;
-int j;
-int i;
-if (str == NULL)
-{
-return (0);
-}
-else
-{
-j = _len(str);
-a = malloc(sizeof(str) + 1 * j);
-if (a == NULL)
-{
-	return (0);
-}
-for (i = 0; str[i] != '\0'; i++)
-{
-	a[i] = str[i];
-}
-return (a);
-}
+	char *a;
+	int j, k;
+
+	if (str == NULL)
+	{
+		return (0);
+	}
+	else
+	{
+		j = _strlen(str);
+		a = (char *)malloc(j * sizeof(char) + 1);
+		if (a == NULL)
+			return (0);
+		for (k = 0; str[k] != '\0'; k++)
+		{
+			a[k] = str[k];
+		}
+		return (a);
+	}
 }
