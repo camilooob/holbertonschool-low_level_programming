@@ -26,7 +26,7 @@ int j = 0;
 int i = 0;
 j = _len(str);
 a = malloc(sizeof(str) * j);
-if (a ==  NULL || str == 0)
+if (a ==  NULL || str == NULL)
 {
 return (0);
 }
