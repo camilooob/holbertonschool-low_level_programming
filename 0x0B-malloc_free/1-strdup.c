@@ -28,7 +28,7 @@ if (str == NULL)
 {
 return (0);
 }
-else 
+else
 {
 j = _len(str);
 a = malloc(sizeof(str) + 1 * j);
