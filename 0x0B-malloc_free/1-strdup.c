@@ -24,14 +24,18 @@ char *_strdup(char *str)
 char *a;
 int j = 0;
 int i = 0;
-j = _len(str);
-a = malloc(j * sizeof(str) + 1);
-if (a ==  NULL || str == NULL)
+if (str == NULL)
 {
 return (0);
 }
 else 
 {
+j = _len(str);
+a = malloc(sizeof(str) + 1 * j);
+if (a == NULL)
+{
+	return (0);
+}
 for (i = 0; str[i] != '\0'; i++)
 {
 	a[i] = str[i];
