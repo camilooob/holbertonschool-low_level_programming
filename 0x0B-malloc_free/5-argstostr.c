@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strlen - len of each elemento of my big array.
+ * _strlen - len of my big array.
  * @str: My string
  * Return: My len.
  */
@@ -16,15 +16,15 @@ int _strlen(char *str)
 	return (i);
 }
 /**
- * argstostr - reply argc and argv function.
- * @ac: My arguments.
- * @av: My array of arrays.
- * Return: My pointer for my string.
+ * argstostr - argc and argv.
+ * @ac: Inputs.
+ * @av: Inputs..
+ * Return: pointer of string.
  */
 char *argstostr(int ac, char **av)
 {
 	char *a;
-	int i, sum, it1, it2;
+	int i, sum, t1, t2;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -40,11 +40,11 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 	sum = 0;
-	for (it1 = 0; it1 < ac; it1++)
+	for (t1 = 0; t1 < ac; t1++)
 	{
-		for (it2 = 0; av[it1][it2] != '\0'; it2++)
+		for (t2 = 0; av[t1][t2] != '\0'; t2++)
 		{
-			a[sum] = av[it1][it2];
+			a[sum] = av[t1][t2];
 			sum++;
 		}
 		a[sum] = '\n';

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strlen - Len of a string.
+ * _strlen - Len string.
  * @str: My string.
  * Return: Length.
  */
@@ -16,10 +16,10 @@ int _strlen(char *str)
 	return (i);
 }
 /**
- * str_concat - concatane two strings.
- * @s1: My first string.
- * @s2: My second string.
- * Return: Only one string with both strings.
+ * str_concat - concatane strings.
+ * @s1: string.
+ * @s2: second string.
+ * Return: strings.
  */
 char *str_concat(char *s1, char *s2)
 {

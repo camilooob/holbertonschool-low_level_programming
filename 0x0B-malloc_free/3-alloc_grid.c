@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - print a array
- * @width: width of the grid
- * @height: height of the grid
+ * alloc_grid - print array.
+ * @width: width grid.
+ * @height: height grid.
  *
- * Return: doble pointer for the bidimensional array.
+ * Return: double pointer for array.
  */
 int **alloc_grid(int width, int height)
 {
