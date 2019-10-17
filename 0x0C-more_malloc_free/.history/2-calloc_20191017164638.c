@@ -7,21 +7,13 @@
 * Return: Pointer.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
-{
+
 	char *p;
-	unsigned int i, d;
+unsigned int i;
 
-	d = nmemb * size;
-	if (nmemb <= 0 || size <= 0)
-		return (NULL);
+if (nmemb <= 0 || size <= 0)
+	return (NULL);
 
-	p = malloc(d);
-	if (p == NULL)
-		return (NULL);
-
-	for (i = 0; i < (d); i++)
-	{
-		p[i] = 0;
-	}
-	return (p);
-}
+p = malloc(nmemb * size);
+if (p == NULL)
+return (NULL)
