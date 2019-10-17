@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * array_range - array of integers.
  * @min: input min.
@@ -13,7 +14,7 @@ int *array_range(int min, int max)
 	int *a;
 	int i, full;
 
-	full = (max - min);
+	full = (min - max);
 	if (min > max)
 	{
 		return (NULL);
