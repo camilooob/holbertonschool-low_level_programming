@@ -25,30 +25,4 @@ int _strlen(char *str)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *a;
-	int lens1, lens2, j, i;
-	unsigned int d = n;
-	unsigned int e;
-
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	lens1 = _strlen(s1);
-	lens2 = _strlen(s2);
-	a = malloc(((lens1) + (lens2) + 1) * sizeof(char));
-
-	if (a == NULL)
-		return (NULL);
-
-	for (j = 0; j < lens1; j++)
-	{
-		a[j] = s1[j];
-	}
-	for (i = lens1, e = 0; e <= d; i++, e++)
-	{
-		a[i] = s2[e];
-	}
-	return (a);
 }

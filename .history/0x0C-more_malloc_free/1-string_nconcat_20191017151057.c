@@ -26,9 +26,7 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *a;
-	int lens1, lens2, j, i;
-	unsigned int d = n;
-	unsigned int e;
+	int lens1, lens2, j, i, e;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -46,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		a[j] = s1[j];
 	}
-	for (i = lens1, e = 0; e <= d; i++, e++)
+	for (i = lens1, e = 0; e <= n; i++, e++)
 	{
 		a[i] = s2[e];
 	}
