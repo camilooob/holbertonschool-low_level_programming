@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	int lens1, lens2, j, i, f;
 	unsigned int d = n;
-	unsigned int ulens2;
+	unsigned int ulens2 = lens2;
 	unsigned int e;
 
 	if (s1 == NULL)
@@ -47,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		a[j] = s1[j];
 	}
-	ulens2 = lens2;
+
 	if (d >= ulens2)
 	{
 		for (i = lens1, f = 0; f <= lens2; i++, f++)
