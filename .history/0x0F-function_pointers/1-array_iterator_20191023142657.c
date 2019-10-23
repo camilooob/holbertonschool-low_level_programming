@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "function_pointers.h"
+#include <stddef.h>
 /**
  * array_iterator - function that prints name
  * @array: array
