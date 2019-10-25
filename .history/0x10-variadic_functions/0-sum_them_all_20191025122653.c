@@ -18,5 +18,5 @@ va_start(ap, n);
 for (i = 0; i < n; i++)
 x += va_arg(ap, const unsigned int);
 va_end(ap);
-return (x);
+return (i);
 }
