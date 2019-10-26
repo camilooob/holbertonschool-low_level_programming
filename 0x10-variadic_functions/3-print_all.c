@@ -62,16 +62,16 @@ tstruc drive[] =  {
 {"i", printin},
 {"f", printfl},
 {"s", prints},
-{NULL,NULL}
+{NULL, NULL}
 };
 y = 0;
 va_start(pa, format);
-while (format[y] && format)
+while (format[y] != '\0')
 {
 i = 0;
 while (i < 4)
 {
-if (format[y] == *drive[i].q)
+if (format && format[y])
 {
 printf("%s", separa);
 drive[i].u(pa);
@@ -83,4 +83,3 @@ y++;
 }
 printf("\n");
 va_end(pa);
-}
