@@ -58,19 +58,20 @@ va_list pa;
 int i, y;
 char *separa = "";
 tstruc drive[] =  {
-{'c', printc},
-{'i', printin},
-{'f', printfl},
-{'s', prints}
+{"c", printc},
+{"i", printin},
+{"f", printfl},
+{"s", prints},
+{NULL,NULL}
 };
 y = 0;
 va_start(pa, format);
-while (format[y] != '\0')
+while (format[y] && format)
 {
 i = 0;
 while (i < 4)
 {
-if (format[y] == drive[i].q)
+if (format[y] == *drive[i].q)
 {
 printf("%s", separa);
 drive[i].u(pa);

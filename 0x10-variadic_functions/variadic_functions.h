@@ -13,7 +13,7 @@
  **/
 typedef struct select
 {
-char q;
+char *q;
 void (*u)(va_list pa);
 } tstruc;
 int sum_them_all(const unsigned int n, ...);
