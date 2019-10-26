@@ -6,31 +6,46 @@
  * Return: Nothing.
  */
 void printc(va_list pa)
-{}
+{
+    printf("%c", va_arg(pa, int));
+}
 
 /**
- * printin - print char
+ * printin - print int
  * @pa: Input data.
  * Return: Nothing.
  */
 void printin(va_list pa)
-{}
+{
+    printf("%d", va_arg(pa, int));
+}
 /**
- * printfl - print char
+ * printfl - print float
  * @pa: Input data.
  * Return: Nothing.
  */
 
 void printfl(va_list pa)
-{}
+{
+    printf("%f", va_arg(pa, double));
+}
 
 /**
- * prints - print char
+ * prints - print string
  * @pa: Input data.
  * Return: Nothing.
  */
 void prints(va_list pa)
-{}
+{
+    char *str = va_arg(pa, char *);
+
+    if (str == NULL)
+    {
+        printf("(nil)");
+        return;
+    }
+    printf("%s", str);
+}
 
 /**
  * print_all - print all inputs
@@ -49,10 +64,10 @@ void print_all(const char * const format, ...)
         {'s', prints}
     };
     y = 0;
-    i = 0;
     va_start(pa, format);
     while (format[y] != '\0')
     {
+        i = 0;
         while (i < 4)
         {
             if (format[y] == drive[i].q)
@@ -66,5 +81,5 @@ void print_all(const char * const format, ...)
         y++;
     }
     printf("\n");
-    va_end(listed);
+    va_end(pa);
 }
