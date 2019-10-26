@@ -7,7 +7,7 @@
  */
 void printc(va_list pa)
 {
-    printf("%c", va_arg(pa, int));
+printf("%c", va_arg(pa, int));
 }
 
 /**
@@ -17,7 +17,7 @@ void printc(va_list pa)
  */
 void printin(va_list pa)
 {
-    printf("%d", va_arg(pa, int));
+printf("%d", va_arg(pa, int));
 }
 /**
  * printfl - print float
@@ -27,7 +27,7 @@ void printin(va_list pa)
 
 void printfl(va_list pa)
 {
-    printf("%f", va_arg(pa, double));
+printf("%f", va_arg(pa, double));
 }
 
 /**
@@ -37,14 +37,14 @@ void printfl(va_list pa)
  */
 void prints(va_list pa)
 {
-    char *str = va_arg(pa, char *);
+char *str = va_arg(pa, char *);
 
-    if (str == NULL)
-    {
-        printf("(nil)");
-        return;
-    }
-    printf("%s", str);
+if (str == NULL)
+{
+printf("(nil)");
+return;
+}
+printf("%s", str);
 }
 
 /**
@@ -54,32 +54,32 @@ void prints(va_list pa)
  */
 void print_all(const char * const format, ...)
 {
-    va_list pa;
-    int i, y;
-    char *separa = "";
-    tstruc drive[] =  {
-        {'c', printc},
-        {'i', printin},
-        {'f', printfl},
-        {'s', prints}
-    };
-    y = 0;
-    va_start(pa, format);
-    while (format[y] != '\0')
-    {
-        i = 0;
-        while (i < 4)
-        {
-            if (format[y] == drive[i].q)
-            {
-                printf("%s", separa);
-                drive[i].u(pa);
-                separa = ", ";
-            }
-            i++;
-        }
-        y++;
-    }
-    printf("\n");
-    va_end(pa);
+va_list pa;
+int i, y;
+char *separa = "";
+tstruc drive[] =  {
+{'c', printc},
+{'i', printin},
+{'f', printfl},
+{'s', prints}
+};
+y = 0;
+va_start(pa, format);
+while (format[y] != '\0')
+{
+i = 0;
+while (i < 4)
+{
+if (format[y] == drive[i].q)
+{
+printf("%s", separa);
+drive[i].u(pa);
+separa = ", ";
+}
+i++;
+}
+y++;
+}
+printf("\n");
+va_end(pa);
 }
