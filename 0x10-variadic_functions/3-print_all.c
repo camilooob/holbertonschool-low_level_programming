@@ -71,7 +71,7 @@ while (format[y] != '\0')
 i = 0;
 while (i < 4)
 {
-if (format && format[y])
+if (format[y] == *drive[i].q)
 {
 printf("%s", separa);
 drive[i].u(pa);
@@ -83,3 +83,4 @@ y++;
 }
 printf("\n");
 va_end(pa);
+}
