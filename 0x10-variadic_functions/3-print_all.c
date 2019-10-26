@@ -42,6 +42,7 @@ char *str = va_arg(pa, char *);
 if (str == NULL)
 {
 printf("(nil)");
+return;
 }
 printf("%s", str);
 }
