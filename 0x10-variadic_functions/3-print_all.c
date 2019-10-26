@@ -66,7 +66,7 @@ tstruc drive[] =  {
 };
 y = 0;
 va_start(pa, format);
-while (format[y] != '\0')
+while (format && format[y])
 {
 i = 0;
 while (i < 4)
