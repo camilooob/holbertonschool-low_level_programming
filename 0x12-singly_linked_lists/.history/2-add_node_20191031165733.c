@@ -19,6 +19,8 @@ list_t *add_node(list_t **head, const char *str)
     	newnode->len = _strlen(str);
     	newnode->next = *head;
     	*head = newnode;
+		free(newnode->str);
+    	free(newnode);
     	return (newnode);
 }
 /**
@@ -26,13 +28,13 @@ list_t *add_node(list_t **head, const char *str)
  * @s: input string
  * Return: length of string
  */
-int _strlen(const char *str)
+int _strlen(char *str)
 {
-int contador = 0;
+char *contador = str;
 
-	while (str[contador] != '\0')
+	while (*str)
 	{
-		contador++;
+		str++;
 	}
-return (contador);
+return (str - contador);
 }
