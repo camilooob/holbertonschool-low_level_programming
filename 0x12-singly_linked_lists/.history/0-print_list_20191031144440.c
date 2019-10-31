@@ -11,7 +11,6 @@ while (h != NULL)
 {
 printf("%d - ", h -> len);
 h = h -> next;
-i++;
 }
-return (0);
+i++;
 }
