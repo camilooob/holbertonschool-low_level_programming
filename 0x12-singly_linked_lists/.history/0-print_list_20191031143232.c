@@ -8,7 +8,7 @@ size_t print_list(const list_t *h)
 {
 list_t *i = h;
 
-while (i != NULL)
+while (i! = NULL)
 {
 printf("%d - ", i -> len);
 i = i -> next;
