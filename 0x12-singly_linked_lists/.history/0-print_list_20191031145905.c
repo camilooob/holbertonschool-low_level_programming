@@ -17,7 +17,7 @@ while (h != NULL)
 	{
 		printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-	} i++;
+	}i++;
 }
 	return (i);
 }
