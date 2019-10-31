@@ -33,7 +33,7 @@ list_t *add_node(list_t **head, const char *str)
 			*head = newnode;
 			return (newnode);
 		}
-		return (NULL);
+		return(NULL);
 }
 /**
  * _strlen - a function that returns the length of a string.
