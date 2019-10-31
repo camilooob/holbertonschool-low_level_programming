@@ -21,8 +21,7 @@ return (contador);
  * @str: string.
  * Return: The elements linked.
  */
-
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newnode;
 	list_t *endnode;
@@ -44,12 +43,17 @@ list_t *add_node(list_t **head, const char *str)
 		}
 		else
 		{
+			 while(current->next != NULL)
+        {
+            if(current->next == NULL)
+            {
+                current->next = newNode;
 			newnode->str = strdup(str);
-			if (newnode->str == NULL)
-			{
-				free(newnode);
-				return (NULL);
-			}
+				if (newnode->str == NULL)
+					{
+					free(newnode);
+					return (NULL);
+					}
 			newnode->len = _strlen(str);
 			newnode->next = *head;
 			*head = newnode;
