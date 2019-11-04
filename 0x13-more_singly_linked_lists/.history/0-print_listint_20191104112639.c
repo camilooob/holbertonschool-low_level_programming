@@ -11,8 +11,16 @@ int i = 0;
 
 	while (h != NULL)
 	{
-	printf("%d\n", h->n);
+		if (h->n == NULL)
+		{
+			printf("[0] (nil)\n");
 			h = h->next;
+		}
+		else
+		{
+			printf("[%d]", h->n);
+			h = h->next;
+		}
 		i++;
 	}
 	return (i);
