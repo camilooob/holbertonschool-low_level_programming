@@ -28,11 +28,14 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		}
 		else
 		{
-			newnode->n = print_listint(head);
-			newnode->next = *head;
+			newnode->n = strdup(n);
+			if (newnode->n == NULL)
+			{
+				free(newnode);
+				return (NULL);
+			}
 			*head = newnode;
 			return (newnode);
 		}
 		return (NULL);
 }
-
