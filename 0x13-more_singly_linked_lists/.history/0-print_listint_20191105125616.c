@@ -5,7 +5,7 @@
  * @h: list.
  * Return: The elements linked.
  */
-size_t print_listint(const listint_t *h)
+ssize_t print_listint(const listint_t *h)
 {
 	size_t i;
 	const listint_t *next_node;
@@ -15,12 +15,12 @@ size_t print_listint(const listint_t *h)
 
 	while (next_node != NULL)
 	{
-		printf("%i\n", next_node->n);
+		printf("%i\n", nxt_ptr->n);
 		i += 1;
-		next_node = next_node->next;
+		next_node = nxt_ptr->next;
 	}
 
-	return (i);
+	return (nodeCount);
 }
 
 

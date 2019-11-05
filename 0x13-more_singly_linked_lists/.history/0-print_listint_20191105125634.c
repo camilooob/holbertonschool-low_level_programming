@@ -5,7 +5,7 @@
  * @h: list.
  * Return: The elements linked.
  */
-size_t print_listint(const listint_t *h)
+ssize_t print_listint(const listint_t *h)
 {
 	size_t i;
 	const listint_t *next_node;
@@ -20,7 +20,7 @@ size_t print_listint(const listint_t *h)
 		next_node = next_node->next;
 	}
 
-	return (i);
+	return (nodeCount);
 }
 
 
