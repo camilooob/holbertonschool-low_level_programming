@@ -11,7 +11,7 @@ int i = 0;
 
 	while (h != NULL)
 	{
-			printf("%i\n", h->n);
+	printf("%i\n", h->n);
 			h = h->next;
 			i++;
 	}
