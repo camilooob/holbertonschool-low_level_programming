@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * get_bit - bit position.
- * @n: number.
- * @index: bits.
- * Return: position.
+ * get_bit - get the bit in a position.
+ * @n: My number.
+ * @index: The bit that I want.
+ * Return: The bit in this position.
  */
 
 int get_bit(unsigned long int n, unsigned int index)
@@ -17,10 +17,10 @@ int get_bit(unsigned long int n, unsigned int index)
 	n  >>= index;
 	if (n & 1)
 	{
-		return (1);
+		return(1);
 	}
 	else
 	{
-		return (0);
+		return(0);
 	}
 }
