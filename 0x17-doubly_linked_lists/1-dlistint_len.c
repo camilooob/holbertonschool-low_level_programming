@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * add_dnodeint - add node for list
- * @head: head of double list
- * @n: input 
+ * dlistint_len - numer of elements
+ * @h: head of double list
+ * Return: Value
  */
 size_t dlistint_len(const dlistint_t *h)
 {
 	int i = 0;
 
-	while (h)
+	while (h != NULL)
 	{
 		i++;
 		h = h->next;
