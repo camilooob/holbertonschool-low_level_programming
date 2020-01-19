@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    printf("%d\n", _strlen("Holberton"));
-    return (0);
+	printf("%d\n", _strlen("Holberton"));
+	return (0);
 }
 
