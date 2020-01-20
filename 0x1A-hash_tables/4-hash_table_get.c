@@ -3,7 +3,7 @@
 /**
  * hash_table_get - return value associated with a key
  * @ht: hash table
- * @key: key 
+ * @key: key
  *
  * Return: 1 succeeded, 0 fail
  */
